@@ -68,18 +68,24 @@ export default function Contact() {
           <Stack spacing={2}>
             <TextField
               label="Your Name"
-              name="user_name"
+              name="name"
               variant="outlined"
               fullWidth
               required
             />
             <TextField
               label="Your Email"
-              name="user_email"
+              name="email"
               type="email"
               variant="outlined"
               fullWidth
               required
+            />
+            <TextField
+            name="title"
+            label="Message Title"
+            required
+            fullWidth
             />
             <TextField
               label="Your Message"
