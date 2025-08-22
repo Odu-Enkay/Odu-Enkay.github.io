@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, CardContent, Typography, Grid, Box } from "@mui/material";
+import { Gradient } from "@mui/icons-material";
 
 const About = () => {
   return (
@@ -31,12 +32,17 @@ const About = () => {
             sx={{
               
               boxShadow: "0px 6px 20px rgba(0,0,0,0.1)",
-              backgroundColor: "#FCF8F7", // wrapper bg
+             //backgroundImage: "linear-gradient(90deg, #ff6a00, #eee097) 1",
+             backgroundImage:"url(/images/bg.png)",
+         backgroundSize:'cover',
+        backgroundPosition: 'center',
+             border:"3px solid darkpurple",
+             
               padding: 2,
             }}
           >
             <CardContent>
-              <Typography variant="body1" align="center" sx={{ color: "#333", lineHeight: 1.8 }}>
+              <Typography variant="body1" align="center" sx={{ color: "#fff", lineHeight: 1.8 }}>
                 I am a motivated <strong> full-stack developer</strong> with strong skills in 
                 <strong> JavaScript, Node.js, Express, React, Advanced CSS, Bootstrap, Material UI, Ruby on Rails,  and PostgreSQL</strong>.  
                 I enjoy building web applications that solve real-world problems, and I bring

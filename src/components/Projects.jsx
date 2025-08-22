@@ -1,24 +1,25 @@
 
 import React from "react";
 import { Card, CardContent, CardActions, Button, Box,  Typography, Grid, CardMedia} from '@mui/material';
+import{ Code, Work, PhotoLibrary} from "@mui/icons-material";
 
 const projects = [
   {
     title: "BuyBuy ecommerce webApp",
     description: 'A full-stack web application that allows users to buy, sell, and swap products. It features user authentication, product listings, favorites, seller tools, and real-time chat. Tech Stack: Rails API, PostgreSQL, React, Material UI, CSS, Actioncable',
-    image: '/images/buybuy.png',
+    icon: <Work sx={{ fontSize: 28, color: "white" }} />,
     link: 'https://github.com/manavpanchotiya/BuyBuy'
   },
 
   { title: "Resume Matcher webApp",
     description: 'A full-stack web application that allows job Applicants to match their resume wiyh the job description and get the similarity score. If there is need for improvement, it recoomends the keywords to add to the resume',
-    image: '/images/resume.png',
+    icon: <Code sx={{ fontSize: 28, color: "white" }} />,
     link: 'https://github.com/Odu-Enkay/resume_match'
   },
 
   { title: "Photolap webApp",
     description: 'A A full stack single web app photo gallery, featuring topic-based photo filtering Tech Stack: React js, node js, PostgreSQL',
-    image: '/images/buybuy.png',
+    image:  <PhotoLibrary sx={{ fontSize: 28, color: "white" }} />,
     link: 'https://github.com/Odu-Enkay/photolabs-starter'
   },
 ]
@@ -38,9 +39,9 @@ const Projects = () => {
       sx={{
         display:"flex",
         justifyContent:"center",
-        backgroundImage:"url(/images/bg.png)",
+        /* backgroundImage:"url(/images/bg.png)",
          backgroundSize:'cover',
-        backgroundPosition: 'center',
+        backgroundPosition: 'center', */
         px:2,
         py:1,
         borderRadius:"8px",
@@ -52,7 +53,7 @@ const Projects = () => {
         variant="h4"
         align="center"
         gutterBottom
-        sx={{ fontWeight: "bold", color: "#FF9800", mb: 5 }}
+        sx={{ fontWeight: "bold", color: "#000", mb: 5 }}
       >
         
         My Projects
