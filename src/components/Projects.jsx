@@ -19,7 +19,7 @@ const projects = [
 
   { title: "Photolap webApp",
     description: 'A A full stack single web app photo gallery, featuring topic-based photo filtering Tech Stack: React js, node js, PostgreSQL',
-    image:  <PhotoLibrary sx={{ fontSize: 28, color: "white" }} />,
+    icon:  <PhotoLibrary sx={{ fontSize: 28, color: "white" }} />,
     link: 'https://github.com/Odu-Enkay/photolabs-starter'
   },
 ]
@@ -66,23 +66,48 @@ const Projects = () => {
 
         {/* render the projects in grids */}
   
-      <Grid container spacing={4}>
+      <Grid container spacing={4} justifyContent="center">
         {projects.map((project, index) => (
           <Grid item key={index} xs={12} sm={6} md={4}>
             <Card
               sx={{
                 maxWidth: 345,
                 height: "100%",
+                borderRadius:"16px",
+                boxShadow:3,
                 display: "flex",
+                textAlign:"center",
                 flexDirection: "column",
+                paddingTop:2,
               }}
             >
-              <CardMedia
+
+               {/* Gradient Rounded Icon */}
+              <Box
+                sx={{
+                  width: 60,
+                  height: 60,
+                  borderRadius: "50%",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  mx: "auto",
+                  mb: 2,
+                  background: "linear-gradient(90deg, #FF9800, #ff6a00)",
+                  color: "white",
+                }}
+              >
+                {project.icon}
+              </Box>
+
+
+             {/*  <CardMedia
                 component="img"
                 height="180"
                 image={project.image}
                 alt={project.title}
-              />
+              /> */}
+
               <CardContent sx={{ flexGrow: 1 }}>
                 <Typography variant="h6" gutterBottom>
                   {project.title}
@@ -101,7 +126,10 @@ const Projects = () => {
                   {project.description}
                 </Typography>
               </CardContent>
-              <CardActions>
+              <CardActions 
+              sx={{
+                justifyContent: "center",
+              }}>
                 <Button size="small" href={project.link}>
                   View Project
                 </Button>

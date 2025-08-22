@@ -78,7 +78,7 @@ const Carousel = () => {
               alt={slide.title}
               style={{
                 width: "100%",        // full viewport width
-                height: "500px",       // full viewport height 
+                height: "550px",       // full viewport height 
                 borderRadius:'12px',
                 objectFit: "cover",
               }}

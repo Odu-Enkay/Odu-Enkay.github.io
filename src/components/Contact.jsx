@@ -48,7 +48,7 @@ export default function Contact() {
       <Paper
         elevation={4}
         sx={{
-          maxWidth: 800,
+          maxWidth: 1020,
           width: "100%",
           p: 4,
           borderRadius: 3,
@@ -59,7 +59,7 @@ export default function Contact() {
           Contact Me
         </Typography>
         <Typography variant="body1" color="text.secondary" sx={{ mb: 3 }}>
-          I’d love to hear from you! Fill out the form below or reach me via my
+          Thank you for stoppin by, I would love to hear from you! Fill out the form below or reach me via my
           socials.
         </Typography>
 

@@ -33,7 +33,7 @@ const About = () => {
               
               boxShadow: "0px 6px 20px rgba(0,0,0,0.1)",
              //backgroundImage: "linear-gradient(90deg, #ff6a00, #eee097) 1",
-             backgroundImage:"url(/images/bg.png)",
+             backgroundImage:"url(/images/bg.png) ",
          backgroundSize:'cover',
         backgroundPosition: 'center',
              border:"3px solid darkpurple",
