@@ -59,7 +59,7 @@ export default function Contact() {
           Contact Me
         </Typography>
         <Typography variant="body1" color="text.secondary" sx={{ mb: 3 }}>
-          Thank you for stoppin by, I would love to hear from you! Fill out the form below or reach me via my
+          Thank you for stopping by, I would love to hear from you! Fill out the form below or reach me via my
           socials.
         </Typography>
 
