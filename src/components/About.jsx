@@ -1,4 +1,3 @@
-// src/components/About.jsx
 import React from 'react';
 import { Box, Typography, Button, Card, CardMedia } from '@mui/material';
 
@@ -57,7 +56,7 @@ function About() {
           >
             <CardMedia
               component="img"
-              image="/images/plcholder.jpg" // ensure this path exists
+              image="/images/plcholder.jpg"
               alt="About image"
               sx={{
                 width: '100%',
@@ -80,17 +79,18 @@ function About() {
           }}
         >
           <Typography variant="body1" sx={{ mb: 2, color: '#ccc' }}>
-            I'm a software developer passionate about creating sleek, responsive web applications.
+            I'm a Software Developer, passionate about creating sleek, responsive web applications.
           </Typography>
 
           <Typography variant="body1" sx={{ mb: 4, color: '#ccc' }}>
-            I specialize in frontend development, Material UI, and modern web technologies to build interactive user
-            interfaces and delightful user experiences.
+            I create clean and interactive web interfaces with modern UI techniques.
+            I take ownership of my work and eager to learn, grow and build excellent products that would be loved by all!
           </Typography>
 
           <Box sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'flex-start' } }}>
             <Button
               variant="contained"
+              href="#contact"
               sx={{
                 background: 'linear-gradient(90deg,#a855f7,#06b6d4)',
                 boxShadow: '0 8px 20px rgba(168,85,247,0.15)',
@@ -99,7 +99,7 @@ function About() {
               }}
             >
               Contact Me
-            </Button>
+            </Button >
           </Box>
         </Box>
       </Box>

@@ -1,4 +1,3 @@
-// src/components/Skills.jsx
 import React from "react";
 import { Box, Typography, Card, CardContent } from "@mui/material";
 import { motion } from "framer-motion";
@@ -6,12 +5,10 @@ import { motion } from "framer-motion";
 const skillCategories = {
   Frontend: [
     "JavaScript",
-    "TypeScript",
     "React.js",
     "Blazor",
     "HTML5",
     "CSS",
-    "Tailwind CSS",
     "Material UI",
     "jQuery",
     "Bootstrap",
@@ -26,7 +23,6 @@ const skillCategories = {
     ".NET Core API",
     "PostgreSQL",
     "MySQL Server",
-    "REST API Development",
   ],
   Others: ["Git", "GitHub", "AWS", "Azure", "Machine Learning"],
 };
@@ -78,7 +74,7 @@ export default function Skills() {
             key={category}
             whileHover={{ scale: 1.03 }}
             transition={{ type: "spring", stiffness: 260, damping: 20 }}
-            style={{ height: "100%" }} // ensures it fills grid cell
+            style={{ height: "100%" }} 
           >
             <Card
               sx={{
@@ -90,11 +86,11 @@ export default function Skills() {
                 borderRadius: 3,
                 color: "#fff",
                 overflow: "hidden",
-                // hover effect: become transparent (inherit page background) but keep the border color
+              
                 "&:hover": {
                   background: "linear-gradient(90deg,#a855f7,#06b6d4)",
                   boxShadow: "0 12px 30px rgba(11,38,82,0.30)",
-                  transform: "translateY(-6px)", // small lift (framer-motion also scales)
+                  transform: "translateY(-6px)", 
                 },
                 transition: "box-shadow 0.25s ease, transform 0.25s ease",
               }}
