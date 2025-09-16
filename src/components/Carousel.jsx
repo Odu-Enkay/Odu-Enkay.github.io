@@ -2,7 +2,6 @@ import React from "react";
 import Slider from "react-slick";
 
 const slides = [
-  { image: "/images/img1.png", title: "Slide One" },
   { image: "/images/img2.png", title: "Slide Two" },
   { image: "/images/img3.png", title: "Slide Three" },
 ];

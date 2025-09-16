@@ -1,145 +1,53 @@
+// src/components/Projects.jsx
 
-import React from "react";
-import { Card, CardContent, CardActions, Button, Box,  Typography, Grid, CardMedia} from '@mui/material';
-import{ Code, Work, PhotoLibrary} from "@mui/icons-material";
+import React from 'react';
+import { Box, Typography, Grid, Card, CardMedia, CardContent } from '@mui/material';
+import { motion } from 'framer-motion';
 
-const projects = [
+const projectsData = [
   {
-    title: "BuyBuy ecommerce webApp",
-    description: 'A full-stack web application that allows users to buy, sell, and swap products. It features user authentication, product listings, favorites, seller tools, and real-time chat. Tech Stack: Rails API, PostgreSQL, React, Material UI, CSS, Actioncable',
-    icon: <Work sx={{ fontSize: 28, color: "white" }} />,
-    link: 'https://github.com/manavpanchotiya/BuyBuy'
+    title: 'BuyBuy',
+    description: 'A full-stack web application that allows users to buy, sell, and swap products. It features user authentication, product listings, favorites, seller tools, and real-time chat.',
+    imageSrc: '/images/buybuy.png',
   },
+  {
+    title: 'Resume Matcher',
+    description: 'A full-stack web application that allows job Applicants to match their resume wiyh the job description and get the similarity score. If there is need for improvement, it recoomends the',
+    imageSrc: '/images/photolab.png',
+  },
+  {
+    title: 'World Last Designs',
+    description: 'A full stack single web app photo gallery, featuring topic-based photo filtering',
+    imageSrc: '/images/img1.png',
+  },
+];
 
-  { title: "Resume Matcher webApp",
-    description: 'A full-stack web application that allows job Applicants to match their resume wiyh the job description and get the similarity score. If there is need for improvement, it recoomends the keywords to add to the resume',
-    icon: <Code sx={{ fontSize: 28, color: "white" }} />,
-    link: 'https://github.com/Odu-Enkay/resume_match'
-  },
-
-  { title: "Photolap webApp",
-    description: 'A A full stack single web app photo gallery, featuring topic-based photo filtering Tech Stack: React js, node js, PostgreSQL',
-    icon:  <PhotoLibrary sx={{ fontSize: 28, color: "white" }} />,
-    link: 'https://github.com/Odu-Enkay/photolabs-starter'
-  },
-]
+const ProjectCard = ({ project }) => (
+  <motion.div whileHover={{ scale: 1.05 }}>
+    <Card sx={{ background: '#0b0b0f', borderRadius: 3, boxShadow: '0 8px 30px rgba(168,85,247,0.2)', overflow: 'hidden' }}>
+      <CardMedia component="img" image={project.imageSrc} alt={project.title} sx={{ height: 200, objectFit: 'cover' }} />
+      <CardContent>
+        <Typography variant="h6" sx={{ fontWeight: 'bold', mb: 1, color: '#fff' }}>{project.title}</Typography>
+        <Typography variant="body2" color="text.secondary">{project.description}</Typography>
+      </CardContent>
+    </Card>
+  </motion.div>
+);
 
 const Projects = () => {
-  
   return (
-    <section
-      id="projects"
-      style={{
-        minHeight: "100px",
-        padding: "20px 10px",
-        backgroundColor: "#FCF8F7",
-      }}
-    >
-      <Box 
-      sx={{
-        display:"flex",
-        justifyContent:"center",
-        /* backgroundImage:"url(/images/bg.png)",
-         backgroundSize:'cover',
-        backgroundPosition: 'center', */
-        px:2,
-        py:1,
-        borderRadius:"8px",
-      }}
-      >
-      
-      {/* Section Title */}
-      <Typography
-        variant="h4"
-        align="center"
-        gutterBottom
-        sx={{ fontWeight: "bold", color: "#000", mb: 5 }}
-      >
-        
-        My Projects
-      </Typography> </Box>
-
-    <div style={{ 
-      display: 'flex',
-      justifyContent: 'center',
-      }}>
-
-        {/* render the projects in grids */}
-  
-      <Grid container spacing={4} justifyContent="center">
-        {projects.map((project, index) => (
-          <Grid item key={index} xs={12} sm={6} md={4}>
-            <Card
-              sx={{
-                maxWidth: 345,
-                height: "100%",
-                borderRadius:"16px",
-                boxShadow:3,
-                display: "flex",
-                textAlign:"center",
-                flexDirection: "column",
-                paddingTop:2,
-              }}
-            >
-
-               {/* Gradient Rounded Icon */}
-              <Box
-                sx={{
-                  width: 60,
-                  height: 60,
-                  borderRadius: "50%",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  mx: "auto",
-                  mb: 2,
-                  background: "linear-gradient(90deg, #FF9800, #ff6a00)",
-                  color: "white",
-                }}
-              >
-                {project.icon}
-              </Box>
-
-
-             {/*  <CardMedia
-                component="img"
-                height="180"
-                image={project.image}
-                alt={project.title}
-              /> */}
-
-              <CardContent sx={{ flexGrow: 1 }}>
-                <Typography variant="h6" gutterBottom>
-                  {project.title}
-                </Typography>
-                <Typography
-                  variant="body2"
-                  color="text.secondary"
-                  sx={{
-                    display: "-webkit-box",
-                    WebkitLineClamp: 4, 
-                    WebkitBoxOrient: "vertical",
-                    overflow: "hidden",
-                    textOverflow: "ellipsis",
-                  }}
-                >
-                  {project.description}
-                </Typography>
-              </CardContent>
-              <CardActions 
-              sx={{
-                justifyContent: "center",
-              }}>
-                <Button size="small" href={project.link}>
-                  View Project
-                </Button>
-              </CardActions>
-            </Card>
+    <Box id="projects" sx={{ py: 12, px: { xs: 4, md: 8 }, backgroundColor: '#05050a' }}>
+      <Typography variant="h3" align="center" sx={{ mb: 8, fontWeight: 'bold', background: 'linear-gradient(90deg,#a855f7,#06b6d4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+        Featured Projects
+      </Typography>
+      <Grid container spacing={6} maxWidth="1200px" mx="auto">
+        {projectsData.map((project) => (
+          <Grid item xs={12} md={4} key={project.title}>
+            <ProjectCard project={project} />
           </Grid>
         ))}
       </Grid>
-    </div>
-     </section>
+    </Box>
   );
 };
 
