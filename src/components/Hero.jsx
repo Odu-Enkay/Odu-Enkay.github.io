@@ -64,7 +64,7 @@ const Hero = () => {
         transition={{ delay: 1, duration: 0.8 }}
       >
         <Avatar
-          src="https://via.placeholder.com/150"
+          src="images/nk.jpeg"
           sx={{
             width: 160,
             height: 160,

@@ -19,12 +19,11 @@ const skillCategories = {
     "Express",
     "Ruby on Rails",
     "C#",
-    ".NET",
     ".NET Core API",
     "PostgreSQL",
-    "MySQL Server",
+    "SQL Server",
   ],
-  Others: ["Git", "GitHub", "AWS", "Azure", "Machine Learning"],
+  Others: ["Git", "GitHub", "AWS", "Azure", "Bash ", "Machine Learning"],
 };
 
 export default function Skills() {
