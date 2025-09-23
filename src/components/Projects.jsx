@@ -14,7 +14,7 @@ const projectsData = [
     title: 'Resume Matcher',
     description:
       'A full-stack web application that allows job applicants to match their resume with the job description and get the similarity score. It also recommends improvements.',
-    imageSrc: '/images/photolab.png',
+    imageSrc: '/images/re_matcher.png',
     projectLink: '#',
   },
   {
