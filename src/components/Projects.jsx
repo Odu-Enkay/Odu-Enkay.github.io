@@ -8,21 +8,21 @@ const projectsData = [
     description:
       'A full-stack web application that allows users to buy, sell, and swap products. It features user authentication, product listings, favorites, seller tools, and real-time chat.',
     imageSrc: '/images/buybuy.png',
-    projectLink: '#',
+    projectLink: 'https://buybuy-frontend.onrender.com',
   },
   {
     title: 'Resume Matcher',
     description:
       'A full-stack web application that allows job applicants to match their resume with the job description and get the similarity score. It also recommends improvements.',
     imageSrc: '/images/re_matcher.png',
-    projectLink: '#',
+    projectLink: 'https://github.com/Odu-Enkay/resume_match',
   },
   {
     title: 'Photolab',
     description:
       'A full-stack single-page web app photo gallery, featuring topic-based photo filtering.',
     imageSrc: '/images/photolab.png',
-    projectLink: '#',
+    projectLink: 'https://github.com/Odu-Enkay/photolabs-starter',
   },
 ];
 
