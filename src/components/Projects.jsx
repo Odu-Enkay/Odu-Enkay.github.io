@@ -7,7 +7,7 @@ const projectsData = [
     title: 'AI Service Request App',
     description:
       'A full-stack web application where users submit support requests in plain English. The system uses Google Gemini AI to automatically categorize requests, suggest priorities, and generate summaries, while administrators manage and track requests through a dashboard.',
-    imageSrc: 'public/images/userpage.png',
+    imageSrc: '/images/userpage.png',
     projectLink: 'https://ai-service-request.vercel.app/',
   },
 
