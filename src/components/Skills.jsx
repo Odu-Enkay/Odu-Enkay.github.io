@@ -4,12 +4,13 @@ import { motion } from "framer-motion";
 
 const skillCategories = {
   Frontend: [
+    "TypeScript",
     "JavaScript",
     "React.js",
-    "Blazor",
     "HTML5",
     "CSS",
     "Material UI",
+    "Tailwind CSS",
     "jQuery",
     "Bootstrap",
     "UI/UX Design",
@@ -23,7 +24,7 @@ const skillCategories = {
     "PostgreSQL",
     "SQL Server",
   ],
-  Others: ["Git", "GitHub", "AWS", "Azure", "Bash ", "Machine Learning"],
+  Others: ["Git", "GitHub", "AWS", "Azure", "Bash ", "Prompt Engineering", "Machine Learning"],
 };
 
 export default function Skills() {

@@ -4,19 +4,21 @@ import { motion } from 'framer-motion';
 
 const projectsData = [
   {
+    title: 'AI Service Request App',
+    description:
+      'A full-stack web application where users submit support requests in plain English. The system uses Google Gemini AI to automatically categorize requests, suggest priorities, and generate summaries, while administrators manage and track requests through a dashboard.',
+    imageSrc: 'public/images/userpage.png',
+    projectLink: 'https://ai-service-request.vercel.app/',
+  },
+
+  {
     title: 'BuyBuy',
     description:
       'A full-stack web application that allows users to buy, sell, and swap products. It features user authentication, product listings, favorites, seller tools, and real-time chat.',
     imageSrc: '/images/buybuy.png',
     projectLink: 'https://buybuy-frontend.onrender.com',
   },
-  {
-    title: 'Resume Matcher',
-    description:
-      'A full-stack web application that allows job applicants to match their resume with the job description and get the similarity score. It also recommends improvements.',
-    imageSrc: '/images/re_matcher.png',
-    projectLink: 'https://github.com/Odu-Enkay/resume_match',
-  },
+  
   {
     title: 'Photolab',
     description:
